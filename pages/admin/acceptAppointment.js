@@ -18,9 +18,10 @@ function AcceptAppointment(props) {
     setData(d.data);
   }
   return (
-    <div className='page-section'>
-      <div className="container align-center">
-    <table className='styled-table'>
+    <div className=''>
+    <div className='mb-50'>
+      <div className="container align-center" style={{overflowX : "auto"}}>
+    <table className='styled-table' >
       <thead>
         <tr>
           <td>Sr.No</td>
@@ -59,6 +60,7 @@ function AcceptAppointment(props) {
         })}
       </tbody>
     </table>
+    </div>
     </div>
     </div>
   )

@@ -75,9 +75,9 @@ const AddServices = (props) => {
                                                 </ul>
             </div></div>
             <div className="row">
-                <div className="col-12 ">
-                    <div className="forms">
-                        <h3 className="title1 mt-5 section-title font-alt align-center">Add Services</h3>
+                <div className="col-lg-12 col-md-12 col-sm-12  ">
+                    <div className="forms container  text-dark ">
+                        <h3 className="title1 mt-5 section-title font-alt align-center mt-10">Add Services</h3>
                         <div className="form-grids row widget-shadow" data-example-id="basic-forms">
 
                             <div className="form-body">
@@ -97,12 +97,12 @@ const AddServices = (props) => {
                                         <input type="number" min={0} id="cost" name="cost" className="form-control" placeholder="Cost" required={true} {...register('cost', registerOptions.cost)} />
                                         <small className="text-danger">{errors?.cost && errors.cost.message}</small>
                                     </div>
-                                    <div className="mb-3">
+                                    <div className="mb-30">
                                         <label htmlFor="formFile" className="form-label">Enter the Image</label>
                                         <input className="form-control" type="file" name='file' id="formFile" {...register('file', registerOptions.file)} />
                                         <small className="text-danger">{errors?.file && errors.file.message}</small>
                                     </div>
-                                    <button type="submit" className="button small mt-5 mb-5">Add</button>
+                                    <button type="submit" className="button small  mb-50">Add</button>
                                 </form>
                             </div>
                         </div>

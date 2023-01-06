@@ -60,100 +60,104 @@ function Login(props) {
          
 
       
-      <section class="page-section">
-                { status==200 ? 
-                status==200?
-            <div class="info-boxes confirmation-message">
-							<div class="info-box-icon">
-								<i class="fa fa-check"></i>
-							</div>
-							<h3 class="info-title ">Confirmation box</h3>
-							Appointment registered succesfully wait for confirmation email. Thank you.
-							<div class="close-button"><i class="fa fa-times"></i></div>
-						</div>:
-                        <div class="info-boxes error-message">
-                        <div class="info-box-icon">
-                            <i class="fa fa-bolt"></i>
-                        </div>
-                        <h3 class="info-title ">Error box</h3>
-                        Login unsuccesful. Username & Password is unauthenticated.
-                        <div class="close-button"><i class="fa fa-times"></i></div>
-                    </div>:<></>
+        <section className="page-section">
+        {status == 200 ?
+          status == 200 ?
+            <div className="info-boxes confirmation-message">
+              <div className="info-box-icon">
+                <i className="fa fa-check"></i>
+              </div>
+              <h3 className="info-title ">Confirmation box</h3>
+              Appointment registered succesfully wait for confirmation email. Thank you.
+              <div className="close-button"><i className="fa fa-times"></i></div>
+            </div> :
+            <div className="info-boxes error-message">
+              <div className="info-box-icon">
+                <i className="fa fa-bolt"></i>
+              </div>
+              <h3 className="info-title ">Error box</h3>
+              Login unsuccesful. Username & Password is unauthenticated.
+              <div className="close-button"><i className="fa fa-times"></i></div>
+            </div> : <></>
 
-                }
-			<div class="container align-center">
-				<h3 class="section-title bottom-line long font-alt">Login<span>Get in touch with us</span></h3>
-				<div class="col-md-10 col-md-offset-1 mb-30">
-				</div>
+        }
+        <div className="container align-center">
+          <h3 className="section-title long  font-alt">Get in touch with us
+            </h3>
+          {/* <div className="col-md-10 col-md-offset-1 mb-30">
+          </div> */}
 
-
-				<div class="col-xs-8 col-md-4 mb-30">
-								<div class="news-item alt-2">
-									<div class="news-media">
-										<img src="/images/img-1.jpg" data-at2x="images/news/img-21@2x.jpg" alt />
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-4 col-md-2 mb-30">
-								<div class="news-item alt-2 mini mb-30">
-									<div class="news-media">
-										<img src="/images/img-13.jpg" data-at2x="images/news/img-22@2x.jpg" alt />
-									</div>
-								</div>
-								<div class="news-item alt-2 mini">
-									<div class="news-media">
-										<img src="/images/img-15.jpg" data-at2x="images/news/img-23@2x.jpg" alt />
-									</div>
-								</div>
-							</div>
-
-                            <div class="col-lg-6 col-md-8 col-xs-12 ml-5 align-left">
-								<h3 class="serv-title font-alt ">Login Form</h3>
-                                </div>
-
-			
-<div className="container bg-success p-2 text-dark bg-opacity-10">
-                <div className='row'>
-                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12 ">
-                        <div className="row">
-                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <p className=''>To grab an offers login first</p>
-                                <form onSubmit={handleSubmit(handleLogin, handleError)}>
-                                    <div className="row">
-                                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                    <div className="form-group">
-                                    <label className="control-label" htmlFor="textarea">Email</label>
-
-                    <input type="email" className="form-control appointment_date" id="floatingInput" placeholder="name@example.com"  {...register('email', registerOptions.email)} />
-                    <small className="text-danger">
-                      {errors?.email && errors.email.message}
-                    </small>
-                  </div>
-                  </div>
-                  <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <div className="form-group">
-                  <label className="control-label" htmlFor="textarea">Password</label>
-
-                    <input type="password" className="form-control appointment_time" id="floatingPassword" placeholder="Password" {...register('password', registerOptions.password)} />
-                    <small className="text-danger">
-                      {errors?.password && errors.password.message}
-                    </small>
-                  </div>
-                </div> 
-                                        <div className="col-md-12">
-                                            <div className="form-group">
-                                                <button type="submit" id="submit" name="submit" className="btn btn-primary button mt-40" >LOGIN</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className='col-12 col-md-12 '>
+          <div className='row'>
+          <div className="col-xs-8 col-md-4 mb-30">
+            <div className="news-item alt-2">
+              <div className="news-media">
+                <img src="/images/img-1.jpg" data-at2x="images/news/img-21@2x.jpg" alt />
+              </div>
             </div>
-			</div>
-		</section>
+          </div>
+          <div className="col-xs-4 col-md-2 mb-30">
+            <div className="news-item alt-2 mini mb-30">
+              <div className="news-media">
+                <img src="/images/img-13.jpg" data-at2x="images/news/img-22@2x.jpg" alt />
+              </div>
+            </div>
+            <div className="news-item alt-2 mini">
+              <div className="news-media">
+                <img src="/images/img-15.jpg" data-at2x="images/news/img-23@2x.jpg" alt />
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div className="container bg-success p-2 text-dark bg-opacity-10">
+            <div className='row p-5'>
+              <div className="col-lg-6 col-md-6  col-sm-6 col-xs-12 ">
+                <div className="row">
+                <h3 className="serv-title font-alt ">Login Form</h3>
+
+                  <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    
+                    <p className=''>To grab an offers login first</p>
+                    <form onSubmit={handleSubmit(handleLogin, handleError)}>
+                      <div className="row">
+                        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div className="form-group">
+                            <label className="control-label" htmlFor="textarea">Email</label>
+
+                            <input type="email" className="form-control appointment_date" id="floatingInput" placeholder="name@example.com"  {...register('email', registerOptions.email)} />
+                            <small className="text-danger">
+                              {errors?.email && errors.email.message}
+                            </small>
+                          </div>
+                        </div>
+                        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div className="form-group">
+                            <label className="control-label" htmlFor="textarea">Password</label>
+
+                            <input type="password" className="form-control appointment_time" id="floatingPassword" placeholder="Password" {...register('password', registerOptions.password)} />
+                            <small className="text-danger">
+                              {errors?.password && errors.password.message}
+                            </small>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <button type="submit" id="submit" name="submit" className="btn btn-primary button mt-40" >LOGIN</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   )
 }

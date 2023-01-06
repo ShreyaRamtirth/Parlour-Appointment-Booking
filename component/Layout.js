@@ -15,7 +15,6 @@ function Layout({ children }) {
         }
         setUsername(cookieCutter.get('name'))
     }, [router.query, isLoggedIn]);
-    console.log(isLoggedIn, "In Layout");
 
     return (
         <>

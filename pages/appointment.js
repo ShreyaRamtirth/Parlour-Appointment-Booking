@@ -93,11 +93,13 @@ function Appointment(props) {
 
                 }
 			<div class="container align-center">
-				<h3 class="section-title bottom-line long font-alt">Book An Procedure<span>We are Open for You</span></h3>
+				<h3 class="section-title  long font-alt">Book An Procedure<span>We are Open for You</span></h3>
 				<div class="col-md-10 col-md-offset-1 mb-30">
 				</div>
 
-
+                <div className='col-12'>
+                    <div className='row'>
+                        <div className='col-6'>
 				<div class="col-xs-8 col-md-4 mb-30">
 								<div class="news-item alt-2">
 									<div class="news-media">
@@ -118,14 +120,13 @@ function Appointment(props) {
 								</div>
 							</div>
 
-                            <div class="col-lg-6 col-md-8 col-xs-12 ml-5 align-left">
-								<h3 class="serv-title font-alt ">Appointment Form</h3>
                                 </div>
-
-			
-<div className="container bg-success p-2 text-dark bg-opacity-10">
+			<div className='col-6'>
+                <div className="container bg-success p-2 text-dark bg-opacity-10">
                 <div className='row'>
-                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12 ">
+                <h3 class="serv-title font-alt ">Appointment Form</h3>
+
+                    <div className="col-lg-6 col-md-6 col-sm-8 col-xs-12 ">
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p className='text-center'> Book your appointment to save salon rush.</p>
@@ -144,20 +145,20 @@ function Appointment(props) {
                                                 <input type="time" className="form-control appointment_time" placeholder="Time" name="atime" id='atime' required={true} {...register('atime', registerOptions.atime)} />
                                             </div>
                                         </div>
-                                        <div className="col-md-12 col-sm-12">
+                                        <div className="col-12">
                                                 {props.services.map((service, index) => {
                                                     return (
-                                                        <div key={index}>
-                                                        <div class="form-check col-md-6 col-sm-6">
+                                                        <div key={index} >
+                                                        <div class="form-check col-md-6 ">
 
-                                                    <input type="checkbox"
+                                                    <input type="checkbox"  class="col-md-6 col-sm-3"
                                                     onClick={(e)=>{
                                                         checkServices(e.target.value,e.target.checked);
                                                     }}
-                                                     className='form-check-input' value={service.name} id={service._id} key={service._id} />
+                                                     className='form-check-input col-md-4 col-sm-3' value={service.name} id={service._id} key={service._id} />
                                                       <label htmlFor={service._id}>{service.name}</label> 
                                                       </div> 
-                                                     <div class="form-check col-md-6 col-sm-6"> <label htmlFor={service._id}> Rs. {service.price} </label> </div>
+                                                     <div class="form-check col-md-4 col-sm-3"> <label htmlFor={service._id}> Rs. {service.price} </label> </div>
                                                      </div>)
                                                 }
                                                 )}
@@ -167,7 +168,7 @@ function Appointment(props) {
                                         <div className="col-md-12">
                                             <div className="form-group">
                                                 <button type="submit" id="submit" name="submit" className="btn btn-primary button mt-40" disabled={login} >Book Appointment</button>
-                                                <p className='font-weight-bold'>
+                                                <p className='font-weight-bold mt-10'>
                                                     <Link href="/login" ><a>Login</a></Link> &nbsp;
                                                     or &nbsp;
                                                     <Link href="/register" ><a>Register</a></Link> &nbsp;
@@ -178,8 +179,11 @@ function Appointment(props) {
                                     </div>
                                 </form>
                             </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
 			</div>

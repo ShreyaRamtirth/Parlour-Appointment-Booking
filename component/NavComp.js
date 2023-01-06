@@ -5,7 +5,6 @@ import cookieCutter from 'cookie-cutter';
 import { useRouter } from 'next/router';
 function NavComp({isLoggedIn, username}) {
 	const router = useRouter();
-	console.log(isLoggedIn, "In Navbar");
 	const handleLogout = (e) => {
 		e.preventDefault();
 		cookieCutter.set("jwt", "", {
@@ -23,25 +22,32 @@ function NavComp({isLoggedIn, username}) {
 		router.push("/");
 	};
 	return (
-		<div className="page" id="top">
-			<header className='sticky-header js-stick top-fixed'>
+		<div className="" id="top">
+			<header className='header  top-fixed'>
 				<div className="container">
-					<nav className="main-nav">
-						<div className="full-wrapper align-center">
+					
+					<nav className=" navbar navbar-expand-lg  ">
+				
+					{/* <div className="navbar-header">
+						<div className='navbar-toggle collapsed '>
 
-
-							<div className="nav-logo-wrap-sticky">
-								<a href="index.html" className="logo">
-									<img src="/images/logo.png" data-at2x="images/logo@2x.png" alt />
-								</a>
-							</div>
-
-							<div className="mobile-nav">
 								<i className="fa fa-bars"></i>
-							</div>
+						</div>
+							</div> */}
 
-							<div className="inner-nav desktop-nav">
-								<ul className="clearlist">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+<i className="fa fa-bars"></i>
+
+      </button>
+    
+    </div>
+	
+						<div className="full-wrapper  align-center">
+
+							<div className="inner-nav collapse navbar-collapse desktop-nav" >
+								<ul className="clearlist nav navbar-nav" id="bs-example-navbar-collapse-1">
 									<li>
 										<Link href="/">
 											<a className="nav-submenu active">Home</a></Link>
@@ -64,7 +70,7 @@ function NavComp({isLoggedIn, username}) {
 
 									<li className="nav-logo-wrap">
 										<a href="index.html" className="logo">
-											<img src="images/logo.png" data-at2x="images/logo@2x.png" alt />
+											<img src="images/logo.png" data-at2x="images/logo@2x.png" width="70%" alt />
 										</a>
 									</li>
 
@@ -89,14 +95,14 @@ function NavComp({isLoggedIn, username}) {
 											</li>
 											<li>
 												<Link href="/registration">
-													<a>Registration</a></Link>
+													<a className="nav-submenu">Registration</a></Link>
 											</li> </>
 									}{isLoggedIn &&
-										<> {username}
+										<> <li><a className="nav-submenu"  >{username}</a> </li>
 											<li className="sep">
 												<a>/</a>
 											</li>
-											<a onClick={handleLogout}> logout </a>
+											<li><a onClick={handleLogout} className="nav-submenu"> logout </a></li>
 										</>
 									}
 

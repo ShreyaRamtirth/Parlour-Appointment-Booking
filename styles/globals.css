@@ -5021,6 +5021,8 @@ blockquote footer:before{
 .font-alt{
   font-family: Philosopher;
   font-weight: 500;
+  line-height: 1;
+
 }
 .font-alt-2{
   font-family: Bilbo Swash Caps;

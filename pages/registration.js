@@ -100,10 +100,13 @@ function Registration() {
 
                 }
 			<div class="container align-center">
-				<h3 class="section-title bottom-line long font-alt">Registration<span>Get in touch with us</span></h3>
+				<h3 class="section-title  long font-alt">Registration<span className='mt-10'>Get in touch with us</span></h3>
 				<div class="col-md-10 col-md-offset-1 mb-30">
 				</div>
 
+<div className='col-12'>
+  <div className='row'>
+    <div className='col-6'>
 				<div class="col-xs-8 col-md-4 mb-30">
 								<div class="news-item alt-2 mt-5">
 									<div class="news-media">
@@ -124,15 +127,16 @@ function Registration() {
 								</div>
 							</div>
 
-                            <div class="col-lg-6 col-md-8 col-xs-12 ml-5 align-left">
-								<h3 class="serv-title font-alt ">Registration Form</h3>
-                                </div>
+                            
 
-			
+                                </div>
+                                <div className='col-6'>
 <div className="container bg-success p-2 text-dark bg-opacity-10">
                 <div className='row'>
-                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12 ">
+                    <div className="col-lg-5 col-md-8 col-sm-8 col-xs-12 ">
                         <div className="row">
+                        <h3 class="serv-title font-alt ">Registration Form</h3>
+
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <p className='text-center'> Connect with us to grab different offers</p>
                                 <form onSubmit={handleSubmit(handleRegistration, handleError)}>
@@ -171,13 +175,17 @@ function Registration() {
             <small className="text-danger">{errors?.address && errors.address.message}</small>
           </div>
 
-          <button type="submit" className="button mb-5">Submit</button>
+          <button type="submit" className="button mb-10">Submit</button>
 
         </form>
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
+                
+  </div>
+</div>
             </div>
 			</div>
 		</section>
