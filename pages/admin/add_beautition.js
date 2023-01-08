@@ -24,55 +24,55 @@ function add_beautition() {
   return (
     <div className='container'>
 
-<section class="page-section">
+<section className="page-section">
                 { status==200 ? 
                 status==200?
-            <div class="info-boxes confirmation-message">
-							<div class="info-box-icon">
-								<i class="fa fa-check"></i>
+            <div className="info-boxes confirmation-message">
+							<div className="info-box-icon">
+								<i className="fa fa-check"></i>
 							</div>
-							<h3 class="info-title ">Confirmation box</h3>
+							<h3 className="info-title ">Confirmation box</h3>
 							Beautition details updated succesfully.
-							<div class="close-button"><i class="fa fa-times"></i></div>
+							<div className="close-button"><i className="fa fa-times"></i></div>
 						</div>:
-                        <div class="info-boxes error-message">
-                        <div class="info-box-icon">
-                            <i class="fa fa-bolt"></i>
+                        <div className="info-boxes error-message">
+                        <div className="info-box-icon">
+                            <i className="fa fa-bolt"></i>
                         </div>
-                        <h3 class="info-title ">Error box</h3>
+                        <h3 className="info-title ">Error box</h3>
                         Beautition details updated unsuccesfully.
-                        <div class="close-button"><i class="fa fa-times"></i></div>
+                        <div className="close-button"><i className="fa fa-times"></i></div>
                     </div>:<></>
 
                 }
-			<div class="container align-center">
-				<h3 class="section-title bottom-line long font-alt">Beautition Profile<span>update details of beauticians</span></h3>
-				<div class="col-md-10 col-md-offset-1 mb-30">
+			<div className="container align-center">
+				<h3 className="section-title bottom-line long font-alt">Beautition Profile<span>update details of beauticians</span></h3>
+				<div className="col-md-10 col-md-offset-1 mb-30">
 				</div>
 
 
-				<div class="col-xs-8 col-md-4 mb-30">
-								<div class="news-item alt-2">
-									<div class="news-media">
-										<img src="/images/img-1.jpg" data-at2x="images/news/img-21@2x.jpg" alt />
+				<div className="col-xs-8 col-md-4 mb-30">
+								<div className="news-item alt-2">
+									<div className="news-media">
+										<img src="/images/img-1.jpg" data-at2x="images/news/img-21@2x.jpg"  />
 									</div>
 								</div>
 							</div>
-							<div class="col-xs-4 col-md-2 mb-30">
-								<div class="news-item alt-2 mini mb-30">
-									<div class="news-media">
-										<img src="/images/img-13.jpg" data-at2x="images/news/img-22@2x.jpg" alt />
+							<div className="col-xs-4 col-md-2 mb-30">
+								<div className="news-item alt-2 mini mb-30">
+									<div className="news-media">
+										<img src="/images/img-13.jpg" data-at2x="images/news/img-22@2x.jpg"  />
 									</div>
 								</div>
-								<div class="news-item alt-2 mini">
-									<div class="news-media">
-										<img src="/images/img-15.jpg" data-at2x="images/news/img-23@2x.jpg" alt />
+								<div className="news-item alt-2 mini">
+									<div className="news-media">
+										<img src="/images/img-15.jpg" data-at2x="images/news/img-23@2x.jpg"  />
 									</div>
 								</div>
 							</div>
 
-                            <div class="col-lg-6 col-md-8 col-xs-12 ml-5 align-left">
-								<h3 class="serv-title font-alt ">Updation Form</h3>
+                            <div className="col-lg-6 col-md-8 col-xs-12 ml-5 align-left">
+								<h3 className="serv-title font-alt ">Updation Form</h3>
                                 </div>
 
 			

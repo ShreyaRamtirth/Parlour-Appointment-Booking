@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { register, handleSubmit, useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import backend from '../../config';
@@ -8,6 +8,7 @@ import cookieCutter from 'cookie-cutter'
 const AddServices = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" });
     const router = useRouter();
+    const [status, setStatus] = useState(0);
 
     const handleOffers = async (data) => {
         const response = await fetch(`${backend}${addOffer}`, {
@@ -30,9 +31,8 @@ const AddServices = (props) => {
                 
                 );  
                 const responseData = await response.json();
-                 
+                setStatus(response.status);    
                 
-        console.log("status: "+ response.status);
     };
 
     const handleError = (errors) => { };
@@ -56,28 +56,33 @@ const AddServices = (props) => {
             }
         },
         off: {
+            
             required: "off price is required"
         }
     };
     return (
         <div className='container'>
-              <div className='row'>
-              <h3 className="title1 mt-5 section-title font-alt align-center">Available offers</h3>
+               { 
+                status==200 ?
+            <div className="info-boxes confirmation-message">
+							<div className="info-box-icon">
+								<i className="fa fa-check"></i>
+							</div>
+							<h3 className="info-title ">Confirmation box</h3>
+							Offer added succesfully.
+							<div className="close-button"><i className="fa fa-times"></i></div>
+						</div>:
+                        status== 0 ? <></>:
+                        <div className="info-boxes error-message">
+                        <div className="info-box-icon">
+                            <i className="fa fa-bolt"></i>
+                        </div>
+                        <h3 className="info-title ">Error box</h3>
+                        Offer added unsuccesfully.
+                        <div className="close-button"><i className="fa fa-times"></i></div>
+                    </div>
 
-              <div className="col-lg-12 col-md-12 mb-lg-50">
-						{/* <ul className="list-style-2">						
-					
-            {props.services.map((service, index) => {
-                                                    return (
-
-                                                    <li key={service._id} className='col-md-4'>{service.name} 
-                                                   
-                                                      </li> 
-                                                    )
-                                                }
-                                                )}
-                                                </ul> */}
-            </div></div>
+                }
             <div className="row">
                 <div className="col-12 ">
                     <div className="forms">
@@ -103,7 +108,7 @@ const AddServices = (props) => {
                                     </div>
                                     <div className="form-group">
                                         <label>% Off Price</label>
-                                        <input type="number" id="off" min={0} name="off" className="form-control" placeholder="off price" required={true} {...register('off', registerOptions.off)} />
+                                        <input type="number" id="off" min={0} max={100} name="off" className="form-control" placeholder="off price" required={true} {...register('off', registerOptions.off)} />
                                         <small className="text-danger">{errors?.cost && errors.cost.message}</small>
                                     </div>
                                    

@@ -60,7 +60,7 @@ function Login(props) {
          
 
       
-        <section className="page-section">
+        {/* <section className="page-section"> */}
         {status == 200 ?
           status == 200 ?
             <div className="info-boxes confirmation-message">
@@ -92,19 +92,19 @@ function Login(props) {
           <div className="col-xs-8 col-md-4 mb-30">
             <div className="news-item alt-2">
               <div className="news-media">
-                <img src="/images/img-1.jpg" data-at2x="images/news/img-21@2x.jpg" alt />
+                <img src="/images/img-1.jpg" data-at2x="images/news/img-21@2x.jpg"  />
               </div>
             </div>
           </div>
           <div className="col-xs-4 col-md-2 mb-30">
             <div className="news-item alt-2 mini mb-30">
               <div className="news-media">
-                <img src="/images/img-13.jpg" data-at2x="images/news/img-22@2x.jpg" alt />
+                <img src="/images/img-13.jpg" data-at2x="images/news/img-22@2x.jpg"  />
               </div>
             </div>
             <div className="news-item alt-2 mini">
               <div className="news-media">
-                <img src="/images/img-15.jpg" data-at2x="images/news/img-23@2x.jpg" alt />
+                <img src="/images/img-15.jpg" data-at2x="images/news/img-23@2x.jpg"  />
               </div>
             </div>
           </div>
@@ -157,7 +157,7 @@ function Login(props) {
             </div>
           </div>
         </div>
-      </section>
+      {/* </section> */}
     </section>
   )
 }

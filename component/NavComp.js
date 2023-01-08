@@ -35,15 +35,14 @@ function NavComp({isLoggedIn, username}) {
 						</div>
 							</div> */}
 
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<div className="navbar-header">
+<button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
 <i className="fa fa-bars"></i>
 
       </button>
     
     </div>
-	
 						<div className="full-wrapper  align-center">
 
 							<div className="inner-nav collapse navbar-collapse desktop-nav" >
@@ -70,7 +69,7 @@ function NavComp({isLoggedIn, username}) {
 
 									<li className="nav-logo-wrap">
 										<a href="index.html" className="logo">
-											<img src="images/logo.png" data-at2x="images/logo@2x.png" width="70%" alt />
+											<img src="images/logo.png" data-at2x="images/logo@2x.png" width="70%"  />
 										</a>
 									</li>
 
@@ -102,13 +101,13 @@ function NavComp({isLoggedIn, username}) {
 											<li className="sep">
 												<a>/</a>
 											</li>
-											<li><a onClick={handleLogout} className="nav-submenu"> logout </a></li>
+											<li><a onClick={handleLogout} className="nav-submenu">logout</a></li>
 										</>
 									}
 
 								</ul>
 								{/* <div className="menu-rect">
-									<img src="/images/rectangle-1.png" data-at2x="images/lines/rectangle-1@2x.png" alt />
+									<img src="/images/rectangle-1.png" data-at2x="images/lines/rectangle-1@2x.png"  />
 								</div> */}
 							</div>
 						</div>
