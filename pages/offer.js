@@ -2,16 +2,16 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import backend from '../config';
-import img1 from '../public/images/img-9.jpg';
-import img2 from '../public/images/img-10.jpg';
-import img3 from '../public/images/img-15.jpg';
-import img4 from '../public/images/img-13.jpg';
+
 import {offers} from "../routes";
 const images = [
-    img1,
-    img2,
-    img3,
-    img4
+    '/images/img-9.jpg',
+    '/images/img-10.jpg',
+    '/images/img-15.jpg',
+    '/images/img-13.jpg',
+    '/images/img-1.jpg',
+    '/images/img-2.jpg',
+    '/images/img-4.jpg',
 ];
 
 
@@ -41,7 +41,7 @@ export default function offer(props) {
                         <div className="gift-wrapper">
                             <a href="shop-product-list.html">
                                 <div className="gift-media " >
-                                    <img src='/images/img-14.jpg' data-at2x="/images/gifts/img-9@2x.jpg" layout='fill' style={{borderRadius: '255px', overflow: 'hidden'}}   />
+                                    <img src={images[randomNumber]} data-at2x="/images/gifts/img-9@2x.jpg" layout='fill' style={{borderRadius: '255px', overflow: 'hidden'}}   />
                                     <div className="gift-inside">
                                         <div className="gift-inside-1">
                                             <div className="gift-price">
@@ -64,7 +64,7 @@ export default function offer(props) {
                             </a>
                         </div>
                     </div>
-                </div> : <></>);
+                </div> : <div key={index}></div>);
 
             })}
                 {/* <div className="col-lg-3 col-md-6 mb-lg-30">

@@ -9,7 +9,7 @@ const appointment_report = () => {
                         <h3 className="title1">Between dates reports</h3>
                         <div className="form-grids row widget-shadow" data-example-id="basic-forms">
                             <div className="form-body">
-                                <form method="post" name="bwdatesreport" action="">
+                                <form method="post" name="bwdatesreport">
                                     <p style={{fontSize: "16px", color: "red"}} align="center"> </p>
 
 
