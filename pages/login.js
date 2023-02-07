@@ -23,7 +23,7 @@ function Login(props) {
     }
     );
     const responseData = await response.json();
-    console.log(responseData);
+    // console.log(responseData);
     cookieCutter.set('jwt', responseData['jwt'], { expires: new Date(Date.now() + 86400) });
     cookieCutter.set('name', responseData['name'], { expires: new Date(Date.now() + 86400) });
     cookieCutter.set('role', responseData['role'], { expires: new Date(Date.now() + 86400) });

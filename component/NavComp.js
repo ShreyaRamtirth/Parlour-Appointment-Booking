@@ -97,7 +97,9 @@ function NavComp({isLoggedIn, username}) {
 													<a className="nav-submenu">Registration</a></Link>
 											</li> </>
 									}{isLoggedIn &&
-										<> <li><a className="nav-submenu"  >{username}</a> </li>
+										<> <li>
+											<Link href="/profile">
+											<a className="nav-submenu">{username}</a></Link> </li>
 											<li className="sep">
 												<a>/</a>
 											</li>

@@ -6,7 +6,9 @@ const allAppointments = '/employee/appointments';
 const addService = '/admin/addservice';
 const addOffer = '/admin/addoffer';
 const bookAppointment = '/customer/bookapppointment';
+const userAppointment = '/customer/userappointments';
+const cancelAppointment = '/customer/cancelappointments';
 
 export {
-    login, registerRoute, allServices, allAppointments, addService, bookAppointment, addOffer, offers
+    login, registerRoute, allServices, allAppointments, addService, bookAppointment, addOffer, offers, userAppointment, cancelAppointment
 }

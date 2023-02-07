@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import backend from '../../config';
 import { addService, allServices } from '../../routes';
 import cookieCutter from 'cookie-cutter'
+import Router from "next/router";
 
 const AddServices = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" });
@@ -24,7 +25,7 @@ const AddServices = (props) => {
             },
         });
         let res = await response.json();
-        console.log(res);
+        Router.reload();
     };
 
     const handleError = (errors) => { };

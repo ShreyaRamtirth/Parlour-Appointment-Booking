@@ -34,6 +34,13 @@ function AcceptAppointment(props) {
       </thead>
       <tbody>
         {data.map((app, i) => {
+          
+    var date = new Date(app.appointment.date);
+    var formattedDate = date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    })
           return (
             <tr key={i}>
               <td>
@@ -46,7 +53,7 @@ function AcceptAppointment(props) {
                 {app.user.email}
               </td>
 
-              <td>{app.appointment.date}
+              <td>{formattedDate}
               </td>
               <td>
                 {app.appointment.time}
