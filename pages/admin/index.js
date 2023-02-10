@@ -10,7 +10,7 @@ const index = () => {
 
 		
             <h3 className="blog-title font-alt align-center mb-5">Admin Menus Click To Explore More</h3>
-				<div className="row">
+				{/* <div className="row">
 					<div className="col-lg-3 col-md-6 mb-lg-30">
 						<div className="gift-item alt-1 font-alt">
 							<div className="gift-wrapper">
@@ -23,7 +23,6 @@ const index = () => {
 											<div className="img-line">
 												<img src="/images/img-line-26.png" data-at2x="images/lines/img-line-26@2x.png"  />
 											</div>
-											{/* <span>Report</span> */}
 											<div className="img-line">
 												<img src="/images/img-line-26.png" data-at2x="images/lines/img-line-26@2x.png"  />
 											</div>
@@ -126,9 +125,12 @@ const index = () => {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 		
+<iframe styles={{background: "#F1F5F4",border: "none",borderRadius: "2px",boxShadow: "0 2px 10px 0 rgba(70, 76, 79, .2)", width: "100vw" ,height: "100vh" }}
+src="https://charts.mongodb.com/charts-stock-market-bbrtd/embed/dashboards?id=63e603e3-91d7-4683-81ff-466215bec614&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=scale&scalingHeight=fixed"></iframe>
+
 
 			</div>
 		</section>

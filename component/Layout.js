@@ -7,6 +7,7 @@ function Layout({ children }) {
     const router = useRouter();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
+    const [role, setRole] = useState("");
     useEffect(() => {
         if (cookieCutter.get('jwt') !== "" && cookieCutter.get('jwt') !== undefined && cookieCutter.get('jwt') !== null) {
             setIsLoggedIn(true);
@@ -14,11 +15,12 @@ function Layout({ children }) {
             setIsLoggedIn(false);
         }
         setUsername(cookieCutter.get('name'))
-    }, [router.query, isLoggedIn]);
+        setRole(cookieCutter.get('role'))
+    }, [router.query, isLoggedIn, role]);
 
     return (
         <>
-            <NavComp isLoggedIn={isLoggedIn} username={username} />
+            <NavComp isLoggedIn={isLoggedIn} username={username} role={role}  />
             {children}
             <FooterComp />
 

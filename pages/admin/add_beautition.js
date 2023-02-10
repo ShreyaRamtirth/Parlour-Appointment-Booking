@@ -3,7 +3,7 @@ import { register, handleSubmit, useForm } from 'react-hook-form';
 
 function add_beautition() {
   const [status,setStatus] = useState(0);
-  const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, handleError, formState: { errors } } = useForm({ mode: "onChange" });
 
   const registerOptions = {
     email: {
@@ -21,6 +21,10 @@ function add_beautition() {
       }
     }
   };
+
+  const handleBeautician = () =>{
+    
+  }
   return (
     <div className='container'>
 
@@ -71,54 +75,39 @@ function add_beautition() {
 								</div>
 							</div>
 
-                            <div className="col-lg-6 col-md-8 col-xs-12 ml-5 align-left">
-								<h3 className="serv-title font-alt ">Updation Form</h3>
-                                </div>
+              <div className="container bg-success p-2 text-dark bg-opacity-10">
+            <div className='row p-5'>
+              <div className="col-lg-6 col-md-6  col-sm-6 col-xs-12 ">
+                <div className="row">
+                <h3 className="serv-title font-alt ">Beautician Form</h3>
 
-			
-<div className="container bg-success p-2 text-dark bg-opacity-10">
-                <div className='row'>
-                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12 ">
-                        <div className="row">
-                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <form >
-                                    <div className="row">
+<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  
+  <p className=''>To add beautician register first as normal user then update it here</p>
+  
+  <form onSubmit={handleSubmit(handleBeautician, handleError)}>
+                      <div className="row">
+                        <div className="col-lg-8 mt-50 col-md-12 col-sm-12 col-xs-12">
+                          <div className="form-group">
+                            <label className="control-label" htmlFor="textarea">Email</label>
 
-
-                                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-
-                                    <div className="form-group">
-                                    <label className="control-label" htmlFor="name">Email</label>
-
-                    <input type="email" className="form-control appointment_date" id="floatingInput" placeholder="name@example.com"  {...register('email', registerOptions.email)} />
-                    <small className="text-danger">
-                      {errors?.email && errors.email.message}
-                    </small>
-                  </div>
-                  </div>
-                  <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <div className="form-group">
-                  <label className="control-label" htmlFor="textarea">Password</label>
-
-                    <input type="password" className="form-control appointment_time" id="floatingPassword" placeholder="Password" {...register('password', registerOptions.password)} />
-                    <small className="text-danger">
-                      {errors?.password && errors.password.message}
-                    </small>
-                  </div>
-                </div> 
-                                        <div className="col-md-12">
-                                            <div className="form-group">
-                                                <button type="submit" id="submit" name="submit" className="btn btn-primary button mt-40" >LOGIN</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            <input type="email" className="form-control appointment_date" id="floatingInput" placeholder="name@example.com"  {...register('email', registerOptions.email)} />
+                            <small className="text-danger">
+                              {errors?.email && errors.email.message}
+                            </small>
+                          </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-			</div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <button type="submit" id="submit" name="submit" className="btn button mt-40" >Add Beautician</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                        </div>
+                        </div></div>
+                        </div></div></div>
+                  
 		</section>
 
 
@@ -126,7 +115,7 @@ function add_beautition() {
 
 
 
-      <div className="main-page">
+      {/* <div className="main-page">
         <div className="forms">
           <h3 className="title1">Beautition Profile</h3>
           <div className="form-grids row widget-shadow" data-example-id="basic-forms">
@@ -154,7 +143,7 @@ function add_beautition() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

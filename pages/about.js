@@ -32,7 +32,9 @@ export default function register() {
 
 				<h3 className="section-title bottom-line long font-alt">Welcome To Relish<span>Loveliness Producers</span></h3>
 				<div className="col-md-10 col-md-offset-1 mb-30">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate ante vitae lacus dignissim condimentum vitae at . Sednonde magna pulvinar, sollicitudin turpis quis, elementum massa. Vivamus ut accumsan massa, mollis viverra est. Aliquam blandit non nulla ac dignissim. Integer venenatis</p>
+					<p>A beauty salon is an establishment that offers a variety of cosmetic treatments and cosmetic services for men and women. Beauty salons may offer a variety of services including professional hair cutting and styling, manicures and pedicures, and often cosmetics, makeup and makeovers.
+						
+					</p>
 				</div>
 				<div className="title-under font-alt">
 					<h3>Best For You</h3>

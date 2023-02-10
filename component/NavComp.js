@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import cookieCutter from 'cookie-cutter';
 import { useRouter } from 'next/router';
-function NavComp({isLoggedIn, username}) {
+function NavComp({isLoggedIn, username, role}) {
 	const router = useRouter();
 	const handleLogout = (e) => {
 		e.preventDefault();
@@ -22,7 +22,9 @@ function NavComp({isLoggedIn, username}) {
 		router.push("/");
 	};
 	return (
+
 		<div className="" id="top">
+
 			<header className='header  top-fixed'>
 				<div className="container">
 					
@@ -46,22 +48,102 @@ function NavComp({isLoggedIn, username}) {
 						<div className="full-wrapper  align-center">
 
 							<div className="inner-nav collapse navbar-collapse desktop-nav" >
+							{ role =="admin" ? 
+							<ul className="clearlist nav navbar-nav" id="bs-example-navbar-collapse-1">
+
+									
+							<li>
+								<Link href="/admin">
+									<a className="nav-submenu active">Home</a></Link>
+							</li>
+							{/* <li className="sep">
+								<a>/</a>
+							</li> */}
+							
+							<li>
+								<Link href="/admin/acceptAppointment"><a className="nav-submenu">Appointment</a></Link>
+
+							</li>
+							{/* <li>
+								<Link href="/admin/appointment_report">
+									<a className="nav-submenu">Reports</a></Link>
+
+							</li> */}
+							{/* <li className="sep">
+								<a>/</a>
+							</li> */}
+							<li>
+								<Link href="/admin/add_beautition">
+									<a className="nav-submenu">Beautician</a></Link>
+							</li>
+
+							<li className="nav-logo-wrap">
+								<a href="index.html" className="logo">
+									<img src="images/logo.png" data-at2x="images/logo@2x.png" width="70%"  />
+								</a>
+							</li>
+
+
+							<li>
+								<Link href="/admin/add_offers"><a className="nav-submenu">Offers</a></Link>
+
+							</li>
+
+							<li>
+								<Link href="/admin/add_services"><a className="nav-submenu">Services</a></Link>
+
+							</li>
+
+							{/* <li className="sep">
+								<a>/</a>
+							</li> */}
+
+
+							{!isLoggedIn &&
+								<>
+									<li>
+										<Link href="/login">
+											<a className="nav-submenu">Login</a></Link>
+									</li>
+									{/* <li className="sep">
+										<a>/</a>
+									</li> */}
+									<li>
+										<Link href="/registration">
+											<a className="nav-submenu">Registration</a></Link>
+									</li> </>
+							}{isLoggedIn &&
+								<> 
+								{/* <li>
+									<Link href="/profile">
+									<a className="nav-submenu">{username}</a></Link> </li> */}
+									{/* <li className="sep">
+										<a>/</a>
+									</li> */}
+									<li><a onClick={handleLogout} className="nav-submenu">logout</a></li>
+								</>
+							}
+
+						</ul>
+							:  
 								<ul className="clearlist nav navbar-nav" id="bs-example-navbar-collapse-1">
+
+									
 									<li>
 										<Link href="/">
 											<a className="nav-submenu active">Home</a></Link>
 									</li>
-									<li className="sep">
+									{/* <li className="sep">
 										<a>/</a>
-									</li>
+									</li> */}
 									<li>
 										<Link href="/appointment">
 											<a className="nav-submenu">Appointment</a></Link>
 
 									</li>
-									<li className="sep">
+									{/* <li className="sep">
 										<a>/</a>
-									</li>
+									</li> */}
 									<li>
 										<Link href="/about">
 											<a className="nav-submenu">About Us</a></Link>
@@ -78,9 +160,9 @@ function NavComp({isLoggedIn, username}) {
 										<Link href="/offer"><a className="nav-submenu">Offers</a></Link>
 
 									</li>
-									<li className="sep">
+									{/* <li className="sep">
 										<a>/</a>
-									</li>
+									</li> */}
 
 
 									{!isLoggedIn &&
@@ -89,9 +171,9 @@ function NavComp({isLoggedIn, username}) {
 												<Link href="/login">
 													<a className="nav-submenu">Login</a></Link>
 											</li>
-											<li className="sep">
+											{/* <li className="sep">
 												<a>/</a>
-											</li>
+											</li> */}
 											<li>
 												<Link href="/registration">
 													<a className="nav-submenu">Registration</a></Link>
@@ -100,14 +182,15 @@ function NavComp({isLoggedIn, username}) {
 										<> <li>
 											<Link href="/profile">
 											<a className="nav-submenu">{username}</a></Link> </li>
-											<li className="sep">
+											{/* <li className="sep">
 												<a>/</a>
-											</li>
+											</li> */}
 											<li><a onClick={handleLogout} className="nav-submenu">logout</a></li>
 										</>
 									}
 
 								</ul>
+							}
 								{/* <div className="menu-rect">
 									<img src="/images/rectangle-1.png" data-at2x="images/lines/rectangle-1@2x.png"  />
 								</div> */}

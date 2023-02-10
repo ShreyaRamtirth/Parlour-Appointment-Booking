@@ -18,11 +18,16 @@ const cancel = async(id) =>{
   }
 
 function profile (props) {
+  console.log(props.messaage);
     return(
         <section className="page-section" >
             <div className="container">
             <h3 className="section-title long  font-alt">Your Appointments</h3>
             <div className='col-12 col-md-12 '>
+
+              {
+
+                  props.message == "No appointments" || props.message == "You are not allowed to access this URL" ? <h4 className="align-center">No Appointments Scheduled Please Book Appointment As Soon As Possible.</h4> : 
           <div className='row'>
           <table className='styled-table' >
       <thead>
@@ -42,28 +47,29 @@ function profile (props) {
              month: "long",
              year: "numeric"
            })
-          return (
+           return (
             <tr key={i}>
               <td>
-                {i + 1}
+              {i + 1}
               </td>
               <td>
-                {app.services.join(", ")}
+              {app.services.join(", ")}
               </td>
               <td>{formattedDate}
               </td>
               <td>
-                {app.time}
+              {app.time}
               </td>
               <td>
-                <button type="button" id={app._id} name="Reject" onClick={e=>cancel(e.target.id)} className="btn btn-danger">Cancel</button>
+              <button type="button" id={app._id} name="Reject" onClick={e=>cancel(e.target.id)} className="btn btn-danger">Cancel</button>
               </td>
-            </tr>
-          );
-        })}
+              </tr>
+              );
+            })}
       </tbody>
     </table>
             </div>
+          }
             </div>
             </div>
         </section>
@@ -72,7 +78,6 @@ function profile (props) {
 
 export async function getServerSideProps(context) {
   let jwt = context.req.cookies['jwt'];
-  console.log(context.req.cookies['name']);
   const response = await fetch(`${backend}${userAppointment}`, {
     method: 'POST',
     body: JSON.stringify({
@@ -86,7 +91,7 @@ export async function getServerSideProps(context) {
 
   let data = await response.json();
   return {
-    props: data,
+    props: data
   }
 }
 
